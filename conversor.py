@@ -1,3 +1,11 @@
+def conversor(tipo_pesos, valor_dolar):
+    pesos = input("¿Cuántos pesos " + tipo_pesos + " tienes?: ")
+    pesos = float(pesos)
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+    dolares = str(dolares)
+    print("Tienes $ " + dolares + " dólares")
+
 menu = """BIENVENIDO AL CONVERSOR DE MODEDAS
 
 1 - Pesos Colombianos
@@ -9,18 +17,10 @@ Elige una opción: """
 opcion = int(input(menu))
 
 if opcion == 1:
-    valor_dolar = 3875
+    conversor("Colombianos", 3875)
 elif opcion == 2:
-    valor_dolar = 65
+    conversor("Argentinos", 65)
 elif opcion == 3:
-    valor_dolar = 20
+    conversor("Mexicanos", 20)
 else:
     print('Ingresa una opción correcta por favor')
-    exit()
-
-
-pesos = input("¿Cuántos pesos tienes?: ")
-pesos = float(pesos)
-dolares = pesos / valor_dolar
-dolares = str(dolares)
-print("Tienes $ " + dolares + " dólares")
